@@ -2,3 +2,27 @@
 API para listas simplemente y doblemente enlazadas en lenguaje C.
 
 El proyecto oculta las estruturas internas, maneja errores mediante un `enum` y sigue una convención consistente para todas las funciones.
+
+## 🎯 Características
+- ✅ Listas simplemente enlazadas (slist)
+- ✅ Listas doblemente enlazadas (dlist)
+- ✅ Manejo de errores con `ListStatus`
+- ✅ API limpia y consistente
+- ✅ Sin variables globales
+
+## 📁 Estructura de la API
+```text
+Listas-enlazadas-API/
+├── examples/
+│   ├── dlist_example.c
+│   └── slist_example.c
+├── include/
+│   ├── dlist.h
+│   ├── list_status.h
+│   └── slist.h
+├── src/
+│   ├── dlist.c
+│   └── slist.c
+├── .gitignore
+└── README.md
+```
