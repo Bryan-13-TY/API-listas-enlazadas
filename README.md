@@ -112,5 +112,5 @@ gcc slist.o dlist.o slist_example.o -o app
 
 ---
 
-## 📚 Ejemplos
+## 📚 Ejemplos (no disponibles aún)
 La carpeta `examples/` contiene programas de ejemplo que muestran cómo usar la API correctamente.
