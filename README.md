@@ -67,7 +67,7 @@ Todas las fuciones devuelve un valor de tipo `ListStatus`, a excepción de `slit
 ListStatus list_status; // crear estatus de la lista
 
 if (list_status != LIST_OK) {
-    /* menejar error */
+    /* manejar error */
 }
 ```
 
