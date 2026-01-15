@@ -24,18 +24,37 @@ Si usas listas doblemente enlazadas:
 ```text
 #include "dlist.h"
 ```
+### 🧪 Ejemplo mínimo de uso
+```text
+#include "slist.h"
+#include <stdio.h>
 
-### 🔧 Compilación
+int main(void) {
+    SList *list = slist_create(); // crear lista
+    ListStatus list_status; // crear estatus de la lista
+
+    list_status = slist_push_back(list, 1);
+    list_status = slist_push_front(list, 15);
+    list_status = slist_push_back(list, 9);
+
+    slist_show(list);
+    list_status = slist_destroy(list);
+}
+```
+
+---
+
+## 🔧 Compilación
 ⚠️ Todos los comandos deben ejecutarse desde la raíz del proyecto.
-#### Compilación básica (listas simples)
+### Compilación básica (listas simples)
 ```text
 gcc -Wall -Wextra -Iinclude src/slist.c examples/slist_example.c -o app
 ```
-#### Compilación por etapas (recomendado)
+### Compilación por etapas (recomendado)
 ```text
 gcc -Wall -Wextra -Iinclude src/slist.c src/dlist.c examples/slist_example.c -o app
 ```
-#### Compilación por etapas (recomendada)
+### Compilación por etapas (recomendada)
 ```text
 gcc -Iinclude -c src/slist.c
 gcc -Iinclude -c src/dlist.c
@@ -43,7 +62,6 @@ gcc -Iinclude -c examples/slist_example.c
 
 gcc slist.o dlist.o slist_example.o -o app
 ```
-
 
 ---
 
