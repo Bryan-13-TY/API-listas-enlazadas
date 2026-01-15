@@ -31,17 +31,31 @@ Si usas listas doblemente enlazadas:
 
 int main(void) {
     SList *list = slist_create(); // crear lista
-    ListStatus list_status; // crear estatus de la lista
 
-    list_status = slist_push_back(list, 1);
-    list_status = slist_push_front(list, 15);
-    list_status = slist_push_back(list, 9);
+    slist_push_back(list, 1);
+    slist_push_front(list, 15);
+    slist_push_back(list, 9);
 
     slist_show(list);
-    list_status = slist_destroy(list);
+    slist_destroy(list);
 }
 ```
+### ⚠️ Manejo de errores
+Todas las fuciones devuelve un valor de tipo `ListStatus`, a excepción de `slits_show`, que solo imprime la lista.
+```text
+ListStatus list_status; // crear estatus de la lista
 
+if (list_status != LIST_OK) {
+    /* menejar error */
+}
+```
+### Estados posibles (`ListStatus`)
+- `LIST_OK` - Operación exitosa
+- `LIST_ERR_NULL` - Lista NULL
+- `LIST_ERR_EMPTY` - Lista vacía
+- `LIST_ERR_ALLOC` - Error al reservar memoria
+- `LIST_ERR_OUT_OF_RANGE` - Posición fuera de rango
+- `LIST_ERR_NOT_FOUND` - Elemento no encontrado
 ---
 
 ## 🔧 Compilación
