@@ -26,3 +26,19 @@ Listas-enlazadas-API/
 ├── .gitignore
 └── README.md
 ```
+
+## Uso de la API
+### Incluir la API a tu proyecto
+Copia la carpeta `include` y los archivos `.c` que necesites (`slist.c` o `dlist.c`) dentro de tu proyecto.
+
+En tu código fuente:
+
+```text
+#include "slist.h"
+```
+
+Si usas listas doblemente enlazadas:
+
+```text
+#include "dlist.h"
+```
