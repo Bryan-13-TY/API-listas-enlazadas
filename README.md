@@ -30,8 +30,22 @@ Si usas listas doblemente enlazadas:
 
 ### 🔧 Compilación
 ⚠️ Todos los comandos deben ejecutarse desde la raíz del proyecto.
+#### Compilación básica (listas simples)
+```text
+gcc -Wall -Wextra -Iinclude src/slist.c examples/slist_example.c -o app
+```
+#### Compilación por etapas (recomendado)
+```text
+gcc -Wall -Wextra -Iinclude src/slist.c src/dlist.c examples/slist_example.c -o app
+```
+#### Compilación por etapas (recomendada)
+```text
+gcc -Iinclude -c src/slist.c
+gcc -Iinclude -c src/dlist.c
+gcc -Iinclude -c examples/slist_example.c
 
-
+gcc slist.o dlist.o slist_example.o -o app
+```
 
 
 ---
