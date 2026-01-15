@@ -17,13 +17,10 @@ El proyecto oculta las estruturas internas, maneja errores mediante un `enum` y 
 Copia la carpeta `include/` y los archivos `.c` que necesites (`slist.c` o `dlist.c`) dentro de tu proyecto.
 
 En tu código fuente:
-
 ```text
 #include "slist.h"
 ```
-
 Si usas listas doblemente enlazadas:
-
 ```text
 #include "dlist.h"
 ```
